@@ -1,0 +1,34 @@
+
+  <view class="my-container">
+    <view class="dealerinfo" bindtap="handleViewTap">
+      <image class="dealerinfo-avatar" src="{{ avatarUrl }}" background-size="cover"/>
+      <view class="dealerinfo-nickname">{{ name }}</view>
+      <view class="code">
+        <text>推荐码</text>
+        <text wx:if="{{invCode === ''}}" bindtap="createInvCode">点击生成</text>
+        <text wx:else>{{invCode}}</text>
+      </view>
+    </view>
+    <view class="my-dealer">
+      <view class="fea-item">
+        <image src="{{dealer.order.icon}}"/>
+        <view class="fea-title">{{dealer.order.title}}</view>
+      </view>
+      <view class="fea-item">
+        <image src="{{dealer.intro.icon}}"/>
+        <view class="fea-title">{{dealer.intro.title}}</view>
+      </view>
+      <view class="fea-item" bindtap="bindCancel">
+        <image src="{{dealer.consumer.icon}}"/>
+        <view class="fea-title">{{dealer.consumer.title}}</view>
+      </view>
+      <view class="fea-item">
+        <image src="{{dealer.release.icon}}"/>
+        <view class="fea-title">{{dealer.release.title}}</view>
+      </view>
+    </view>
+    <view class="censer">
+        <image class="energy" src="{{energy}}"/>
+        <image class="value" src="{{value}}"/>
+    </view>
+  </view>

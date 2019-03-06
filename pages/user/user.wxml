@@ -1,0 +1,83 @@
+
+  <view class="my-container">
+  <!-- 微信or短信 -->
+    <view hidden='{{loginHidden}}'>
+      <view bindtap='cancelLogin' class='layer' />
+      <view class='login-box'>
+        <button bindgetuserinfo='bindgetuserinfo' open-type='getUserInfo' wx:if="{{avatarUrl==''}}">微信登录</button>
+        <button bindtap='showLoginPannel' wx:if="{{resPhone==''}}">绑定手机</button>
+      </view>
+    </view>
+  <!--短信登录-->  
+  <view hidden='{{loginPannelHidden}}'>
+  <view bindtap='cancelLoginPannel' class='layer' />
+  <view class='pannel-box'>
+    <view class='pannel-title'>
+      <text>— 手机登录 —</text>
+      <text class='canel' bindtap='cancelLoginPannel'>×</text>
+    </view>
+    <view>
+      <input class='same'  type='number' placeholder='手机号码' maxlength='11' value='{{phone}}' bindinput='getPhone'></input>
+    </view>
+    <view class='same'>
+      <input class='number'  type='number' placeholder='验证码' maxlength='6' value='{{code}}' bindinput='getCode'></input>
+      <text wx:if="{{send}}" class='pannel-text' bindtap='sendMsg'>获取验证码</text>
+      <text wx:if='{{alreadySend}}' class='pannel-text' >重新获取({{ second + "s"}})</text>
+    </view>
+    <button class='login' bindtap='toLoginPannel'>登录</button>
+  </view>
+</view>
+
+    <view class="userinfo" bindtap="showLogin">
+      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
+      <view class="userinfo-nickname">{{ userInfo.nickName ? userInfo.nickName:'点击头像登录' }}</view>
+    </view>
+    <view class="my-features">
+      <navigator class="fea-item" url="/pages/order-list/order-list">
+        <image src="{{features.order.icon}}"/>
+        <view class="fea-title">{{features.order.title}}</view>
+      </navigator>
+      <view class="fea-item">
+        <image src="{{features.afterSale.icon}}"/>
+        <view class="fea-title">{{features.afterSale.title}}</view>
+      </view>
+      <view class="fea-item" bindtap="assertIsDealer">
+        <image src="{{features.dealer.icon}}"/>
+        <view class="fea-title">{{features.dealer.title}}</view>
+      </view>     
+      <view class="fea-item" bindtap='toExchange'>
+        <image src="{{features.exchange.icon}}"/>
+        <view class="fea-title">{{features.exchange.title}}</view>
+      </view>
+    </view>
+    <view class="my-manage">
+      <navigator class="address" url="/pages/select-address/select-address">
+        <image src="{{manage.address.icon}}"/>
+        <text class="title">{{manage.address.title}}</text>
+        <image class="right" src="{{manage.rightIcon}}"/>
+      </navigator>
+      <navigator class="beDealer" url="/pages/be-dealer/be-dealer">
+        <image src="{{manage.beDealer.icon}}"/>
+        <text class="title">{{manage.beDealer.title}}</text>
+        <image class="right" src="{{manage.rightIcon}}"/>
+      </navigator>
+    </view>
+    <view class="my-task">
+      <view class="title">{{task.title}}</view>
+      <view class="task-container">
+        <view class="task-item">
+          <image src="{{task.a.icon}}"/>
+          <text class="title">{{task.a.title}}</text>
+        </view>
+        <view class="task-item">
+          <image src="{{task.b.icon}}"/>
+          <text class="title">{{task.b.title}}</text>
+        </view>
+        <view class="task-item">
+          <image src="{{task.c.icon}}"/>
+          <text class="title">{{task.c.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+

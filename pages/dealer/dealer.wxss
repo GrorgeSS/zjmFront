@@ -1,0 +1,76 @@
+.my-container {
+  width: 100%;
+  background-color: #eee;
+}
+.dealerinfo {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dealerinfo .code{
+  position: absolute;
+  left: 75%;
+  top: 70rpx;
+  font-size: 28rpx;
+}
+.dealerinfo .code text{
+  display: block;
+  text-align: center;
+}
+.dealerinfo-avatar {
+  margin-top: 44rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.dealerinfo-nickname {
+  color: #aaa;
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+.my-dealer {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 10rpx;
+  display: flex;
+  background-color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  padding:  10rpx 0;
+}
+.fea-item {
+  flex: 1;
+}
+.fea-item image {
+  width: 68rpx;
+  height: 68rpx;
+}
+.censer{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 640rpx;
+  margin-top: 10rpx;
+  background-image: url("https://api.txzyzjm.xyz/imgs/dealer/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.censer .energy{
+  position: absolute;
+  left: 0;
+  top: 30rpx;
+  width: 120rpx;
+  height: 80rpx;
+}
+.censer .value{
+  position: absolute;
+  left: 0;
+  top: 100rpx;
+  width: 120rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,25 @@
+<!-- 香气排行榜 -->
+<template name='aromaRank'>
+  <view class='rank-item'>
+    <view wx:if="{{ranking===1}}" class='rank-icon-box'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/rank/yu.png' class='rank-icon'></image>
+    </view>
+    <view wx:elif="{{ranking===2}}" class='rank-icon-box'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/rank/au.png' class='rank-icon'></image>
+    </view>
+    <view wx:elif="{{ranking===3}}" class='rank-icon-box'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/rank/ag.png' class='rank-icon'></image>
+    </view>
+    <view wx:elif="{{ranking===4}}" class='rank-icon-box'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/rank/cu.png' class='rank-icon'></image>
+    </view>
+    <view wx:elif="{{ranking===5}}" class='rank-icon-box'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/rank/fe.png' class='rank-icon'></image>
+    </view>
+    <view wx:else class='rank-icon-box'>
+      <view class='rank-icon'>{{ranking}}</view>
+    </view>
+    <text class='user-name'>{{name}}</text>
+    <text class='amount'>{{aromaAmount}}</text>
+  </view>
+</template>

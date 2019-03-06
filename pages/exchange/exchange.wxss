@@ -1,0 +1,16 @@
+
+.details{
+  width: 750rpx;
+  height: 324rpx; 
+}
+
+.text{
+  width: 200rpx;
+  height: 100rpx;
+  border: 1rpx solid #fff;
+  border-radius: 20rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin: 20rpx auto;
+  color: black
+}

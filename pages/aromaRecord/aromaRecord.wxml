@@ -1,0 +1,18 @@
+<view class='showNoRecord' wx:if='{{collectRecord == 0}}'>暂未收取香气</view>
+
+<view class='record-box'>
+  <view class='title'>香气收取记录</view>
+  <block wx:for-items="{{collectRecord}}" wx:key="{{index}}">
+    <view class='record-detail'>
+      <view class='collect-type' wx:if='{{item.type==1}}'>
+        日常收取
+        <view class='collect-time'>{{item.collect_time}}</view>
+      </view>
+      <view class='collect-type' wx:if='{{item.type==2}}'>
+        日常收取
+        <view class='collect-time'>{{item.collect_time}}</view>
+      </view>
+      <view class='collect-amount'>+{{item.everytime_collect_fragrance_quantity}}</view>
+    </view>
+  </block>
+</view>

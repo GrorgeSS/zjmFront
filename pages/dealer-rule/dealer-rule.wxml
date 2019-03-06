@@ -1,0 +1,25 @@
+<view class="rule-container">
+    <view class="input-container">
+        <view class="input-item">
+            <label for="name">称呼</label>
+            <input type="text" placeholder="称呼(先生或女士)" class="name" id="name" bindinput="getName"/>
+        </view>
+        <view class="input-item">
+            <label for="phone">联系手机</label>
+            <input type="number" placeholder="联系手机，请填写真实手机" class="phone" id="phone" maxlength="11" bindinput="getPhone"/>
+        </view>
+        <view class="input-item">
+            <label for="identity">身份证号</label>
+            <input type="number" placeholder="请输入您的身份证号码" class="identity" id="identity" bindinput="getIdentity"/>
+        </view>
+        <view class="input-item">
+                    <label for="address">收货地址</label>
+                    <input type="number" placeholder="请输入您的收货地址" class="identity" id="address" bindinput="getAddress"/>
+                </view>
+        <view class="input-item">
+            <label for="invitation">推荐码</label>
+            <input type="text" placeholder="请向经销商或本公司索取" class="invitation" id="invitation" bindinput="getInvitation"/>
+        </view>
+        <view class="btn" bindtap="submit">提交</view>
+    </view>
+</view>

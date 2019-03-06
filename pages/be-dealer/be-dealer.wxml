@@ -1,0 +1,5 @@
+<view class="container">
+    <navigator class="btn" url="/pages/dealer-rule/dealer-rule">
+        <image src="{{btn}}"/>
+    </navigator>
+</view>

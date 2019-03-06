@@ -1,0 +1,8 @@
+
+<view class='box'> 
+  <image class="detail" src="https://api.txzyzjm.xyz/imgs/about/details.jpg"></image>
+  <image class='buyButton' bindtap='ToPurchase'
+  src='https://api.txzyzjm.xyz/imgs/about/tobuy.png'>
+  </image>
+  <view  bindtap='toExchange' class='text'>兑换商城</view>
+</view>

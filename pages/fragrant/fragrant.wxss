@@ -1,0 +1,142 @@
+.my-container{
+    width: 100%;
+    background-color: #eee;
+}
+.fragrant-total{
+    width: 100%;
+    height: 242rpx;
+    background-color: #7F9FA7;
+    margin-bottom: 20rpx;
+}
+.fragrant-total .total{
+    width: 50%;
+    height: 121rpx;
+    padding-top: 60rpx;
+    margin: 0 auto 60rpx;
+}
+.fragrant-total .total .title{
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: block;
+    font-size: 24rpx;
+}
+.fragrant-total .total .num{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    background-color: #fff;
+}
+.fragrant-total .total .title text:first-of-type,.fragrant-total .total .num text:first-of-type{
+    float: left;
+    padding-left: 10rpx;
+}
+.fragrant-total .total .title text:last-of-type,.fragrant-total .total .num text:last-of-type{
+    float: right;
+    padding-right: 10rpx;
+}
+.fragrant-intro{
+    width: 100%;
+    height: 340rpx;
+    ling-height: 340rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+.fragrant-intro .title{
+    width: 100%;
+    height: 68rpx;
+    line-height: 68rpx;
+    font-size: 32rpx;
+}
+.fragrant-intro .intro-container{
+    width: 100%;
+    height: 272rpx;
+    line-height: 272rpx;
+    text-align: center;
+    font-size: 28rpx;
+    padding: 16rpx;
+    box-sizing: border-box;
+}
+.fragrant-record{
+    width: 100%;
+    height: 768rpx;
+    background-color: #fff;
+}
+.fragrant-record .title{
+    width: 100%;
+    height: 68rpx;
+    line-height: 68rpx;
+    font-size: 32rpx;
+}
+.fragrant-record .record-container{
+
+}
+.fragrant-record .record-container .record-item{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+}
+.fragrant-record .record-container .record-item .left{
+    flex: 2;
+    font-size: 28rpx;
+    padding-left: 46rpx;
+}
+.fragrant-record .record-container .record-item .left .type{
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: block;
+    color: #000;
+}
+.fragrant-record .record-container .record-item .left .timestamp{
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: block;
+    color: rgba(163, 163, 163, 1);
+}
+.fragrant-record .record-container .record-item .right{
+    flex: 1;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-right: 46rpx;
+    color: #E51C23;
+}
+.fragrant-record text.more{
+    width: 100%;
+    height: 60rpx;
+    ling-height: 60rpx;
+    font-size: 24rpx;
+    text-align: center;
+    color: #ccc;
+}
+.no-record{
+    width: 100%;
+    height: 60rpx;
+    ling-height: 60rpx;
+    font-size: 24rpx;
+    text-align: center;
+    color: #ccc;
+}
+.btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 90rpx;
+}
+.btn .btn1{
+    flex: 1;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #493A37;
+    color: #fff;
+}
+.btn .btn2{
+    flex: 1;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #fff;
+}

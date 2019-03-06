@@ -1,0 +1,77 @@
+<import src='../template/template.wxml' />
+<view>
+  <!-- 顶部 -->
+  <view class='topContent'>
+    <!-- 背景 -->
+    <image src='https://api.txzyzjm.xyz/imgs/main/aroma/InterfaceDiagram.jpg' class='interface'></image>
+    <image src='https://api.txzyzjm.xyz/imgs/main/aroma/aromaIntroduce.png' class='introduction' bindtap='navTo' data-nav='intro'></image>
+    <!-- 公告栏 -->
+    <view class='notice'>
+      <view class='notice-left'>
+        <image src='https://api.txzyzjm.xyz/imgs/main/trumpet.png' class='trumpet'></image>
+        <text>公告：</text>
+      </view>
+      <view class='notice-right'>
+        <swiper autoplay='true' interval='7000' duration='7000' circular='true'>
+
+          <swiper-item>
+            <view class='rolling-txt'>首批区块链体验，更早地把握经济未来</view>
+          </swiper-item>
+          <swiper-item>
+            <view class='rolling-txt'>首批区块链体验，更早地把握经济未来</view>
+          </swiper-item>
+
+        </swiper>
+
+      </view>
+    </view>
+    <!-- 香气收集功能的实现 -->
+    <view class="{{temp.length===0?'aroma-btn':'aroma-btn hide'}}" animation="{{aromaAnimation}}">
+      <image src='https://api.txzyzjm.xyz/imgs/main/aroma/bubble.png' class='bubble'></image>
+      <view class='aroma-text'>香气凝聚中</view>
+    </view>
+    <!-- 悬浮气泡层 -->
+    <view class='bubble-box'>
+      <block wx:for='{{aromaItems}}' wx:for-index='index'>
+        <view animation="{{aromaAnimation}}" data-num="{{index}}" bindtap='pickAroma' class="{{!aromaItems[index].hidden?'':'hide'}}">
+          <image src='https://api.txzyzjm.xyz/imgs/main/aroma/bubble.png' class='bubble'></image>
+          <view class='aroma-text'>{{aromaItems[index].fragrance_quantity}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 中间的按钮 -->
+  <view class='icon-box'>
+    <view class='item'  data-nav='aroma' bindtap='navTo'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/icon/aroma.png'  class='icon-item'></image>
+      <text>香气：{{total}}</text>
+    </view>
+    <view class='item' data-nav='task' bindtap='navTo'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/icon/task.png' class='icon-item'></image>
+      <text>任务</text>
+    </view>
+    <view class='item' wx:if="{{ifRegisted==0 || resPhone==''}}" bindtap='navTo' data-nav='share'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/icon/accelerate.png' class='icon-item'></image>
+      <text>加速</text>
+    </view>
+    <button class='item' open-type='share' wx:if="{{ifRegisted!=0 && resPhone!=''}}">
+      <image src='https://api.txzyzjm.xyz/imgs/main/icon/accelerate.png' class='icon-item'></image>
+      <text>加速</text>
+    </button>
+    <view class='item' data-nav='exchange' bindtap='navTo'>
+      <image src='https://api.txzyzjm.xyz/imgs/main/icon/exchange.png ' class='icon-item'></image>
+      <text>兑换</text>
+    </view>
+  </view>
+  <!-- 香气排行榜 -->
+  <view class='rank-box'>
+    <text class='rank-title'>香气排行</text>
+    <view class='rank-item-box'>
+      <block wx:for='{{rankList}}'>
+        <template is='aromaRank' data='{{...item}}'></template>
+      </block>
+    </view>
+  </view>
+
+  <!-- end -->
+</view>

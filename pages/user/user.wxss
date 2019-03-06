@@ -1,0 +1,194 @@
+.my-container {
+  width: 100%;
+  background-color: #eee;
+}
+.layer{
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;
+}
+.login-box{
+  z-index: 1001;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+.pannel-box{
+  width: 76%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 40%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #fafafa;  
+  margin: -150px 12% 0 12%;  
+  border-radius: 10rpx;  
+}
+.pannel-title{
+  color: #999;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 40rpx 0;
+  font-family: "微软雅黑"
+}
+.canel{
+  position: absolute;
+  right: 10%;
+  top: 20rpx;
+  font-size: 60rpx
+}
+.same{
+  border: 1rpx solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  margin: 40rpx 10%;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  width: 80%;
+  position: relative
+}
+.number{
+  display: inline-block;
+  height: 100%;
+}
+.pannel-text{
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  width: 196rpx;  
+  text-align: right;
+  right: 14rpx;
+}
+.login{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  text-align: center;
+  margin: 40rpx 10%;
+  background-color: orangered;
+  color: #fafafa;
+  font-size: 30rpx
+}
+.userinfo {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  margin-top: 44rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+.my-features {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 10rpx;
+  display: flex;
+  background-color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.fea-item {
+  flex: 1;
+}
+.fea-item image {
+  width: 68rpx;
+  height: 68rpx;
+}
+.my-manage {
+  width: 100%;
+  height: 158rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+.my-manage view.address {
+  border-bottom: 1px #bbb solid;
+}
+.my-manage .address,
+.my-manage .beDealer {
+  height: 79rpx;
+  line-height: 79rpx;
+  text-align: center;
+}
+.my-manage .address image,
+.my-manage .beDealer image {
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 15rpx;
+  padding-left: 15rpx;
+  float: left;
+  display: inline-block;
+}
+.my-manage text {
+  margin-left: 10rpx;
+  float: left;
+}
+.my-manage .address image.right,
+.my-manage .beDealer image.right {
+  width: 10rpx;
+  height: 10rpx;
+  display: inline-block;
+  float: right;
+}
+.my-task {
+  width: 100%;
+  height: 200rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+}
+.my-task .title {
+  width: 100%;
+  height: 52rpx;
+  line-height: 52rpx;
+  border-bottom: 1rpx #ccc soild;
+  padding: 5rpx 10rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+.my-task .task-container {
+  display: flex;
+  background-color: #fff;
+}
+.task-item {
+  flex: 1;
+  height: 170rpx;
+  border-bottom: 1rpx #ccc solid;
+}
+.task-item:nth-of-type(1),
+.task-item:nth-of-type(2) {
+  border-right: 1rpx #ccc solid;
+}
+.task-item image {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  display: block;
+}
+.task-item text.title {
+  width: 100%;
+  display: block;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 28rpx;
+}

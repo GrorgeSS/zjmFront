@@ -1,0 +1,9 @@
+
+<view>
+  <image class='details' src='https://api.txzyzjm.xyz/imgs/about/exchangeRules.jpg'>
+  </image>
+  <view class='text'>
+    <view>开发中···</view>
+    <view>敬请期待</view>
+  </view>
+</view>

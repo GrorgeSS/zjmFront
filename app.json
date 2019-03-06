@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/aroma/aroma",
+    "pages/zjm/zjm",
+    "pages/introduce/introduce",
+    "pages/order/order",
+    "pages/exchange/exchange",
+    "pages/template/template",
+    "pages/user/user",
+    "pages/address/address",
+    "pages/be-dealer/be-dealer",
+    "pages/dealer-rule/dealer-rule",
+    "pages/dealer/dealer",
+    "pages/select-address/select-address",
+    "pages/order-list/order-list",
+    "pages/fragrant/fragrant",
+    "pages/aromaRecord/aromaRecord"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中界门",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#e3863a",
+    "list": [
+      {
+        "pagePath": "pages/aroma/aroma",
+        "iconPath": "imgs/tabBar/aroma.png",
+        "selectedIconPath" :"imgs/tabBar/aroma-on.png",
+        "text": "香气"
+      },
+      {
+        "pagePath": "pages/zjm/zjm",
+        "iconPath": "imgs/tabBar/zjm.png",
+        "selectedIconPath": "imgs/tabBar/zjm-on.png",
+        "text": "中界门"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "imgs/tabBar/my.png",
+        "selectedIconPath": "imgs/tabBar/my-on.png",
+        "text": "我的"
+      }
+    ]
+   }
+}

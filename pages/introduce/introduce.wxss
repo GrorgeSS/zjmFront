@@ -1,0 +1,43 @@
+page {
+  height: 100%;
+}
+.bg{
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  width: 750rpx;
+  height: 100%;
+}
+.container {
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.intro-box {
+  border: 4rpx solid #bbbbbb;
+  padding: 30rpx 25rpx;
+  margin: 60rpx 40rpx;
+}
+
+.intro {
+  color: white;
+  font-size: 15px;
+  text-indent: 20rpx;
+}
+.accelerate{
+ margin:70rpx 0;
+}
+.accelerate-btn{
+  width: 650rpx;
+  height: 120rpx;
+}
+.detail-btn{
+  margin-top: 30rpx;
+  width: 220rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}

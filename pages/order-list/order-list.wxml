@@ -1,0 +1,34 @@
+<view class="details-container">
+<view class='showNoOrder' wx:if='{{ifNoOrder}}'>暂无订单</view>
+    <block wx:for-items="{{orderDetails}}" wx:key="{{index}}">
+      <view class="order-item" wx:if='{{!ifNoOrder}}'>
+          <view class="product-details">
+              <view class="pic">
+                  <image src="{{productPic}}"></image>
+              </view>
+              <view class="detail">
+                  <view>中界门</view>
+                  <view>规格：{{item.total_count}}瓶</view>
+              </view>
+              <view class="univalent">{{item.total_price}}</view>
+          </view>
+          <view class="product-status">
+              <view wx:if="{{item.status === 1}}">未支付</view>
+              <view wx:elif="{{item.status === 2}}">已支付</view>
+              <view wx:elif="{{item.status === 3}}">已发货</view>
+              <view wx:elif="{{item.status === 4}}">已支付，但库存不足</view>
+          </view>
+          <view class="product-price">
+              <view class="num">共<view>{{item.total_count}}</view>件商品</view>
+              <view class="totalPrice">合计 ￥{{item.total_price}}</view>
+              <view class="freight">(含运费￥<view>{{item.delivery}}</view>)</view>
+          </view>
+          <view class="product-btnSet">
+              <view wx:if="{{item.status === 1}}" bindtap='goPay' data-oid='{{item.id}}'>付款</view>
+              <view wx:if="{{item.status === 2}}" data-oid='{{item.id}}' bindtap='DeleteOrder'>删除订单</view>
+              <view wx:if="{{item.status === 1}}" data-oid='{{item.id}}' bindtap='DeleteOrder'>删除订单</view>
+              <view>客服</view>
+          </view>
+      </view>
+    </block>
+</view>

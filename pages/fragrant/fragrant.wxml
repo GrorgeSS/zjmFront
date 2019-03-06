@@ -1,0 +1,40 @@
+<view class="my-container">
+    <view class="fragrant-total">
+        <view class="total">
+            <view class="title">
+                <text>当前种子</text>
+                <text>可兑换金币</text>
+            </view>
+            <view class="num">
+                <text>{{fragrant.seed}}</text>
+                <text>{{fragrant.gold}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="fragrant-intro">
+        <view class="title">香能源、香矿简介</view>
+        <view class="intro-container">香能源、香矿基于区块链的权益凭证</view>
+    </view>
+    <view class="fragrant-record">
+        <view class="title">香气记录</view>
+        <view class="record-container">
+            <block wx:if="{{record}}">
+                <view class="record-item" wx:for-items="{{record}}" wx:key="{{index}}">
+                    <view class="left">
+                        <view class="type">{{item.type}}</view>
+                        <view class="timestamp">{{item.timestamp}}</view>
+                    </view>
+                    <view class="right">{{item.num}}</view>
+                </view>
+                <text class="more">暂未开放查看更多功能</text>
+            </block>
+            <block wx:else>
+                <view class="no-record">暂无收取记录</view>
+            </block>
+        </view>
+    </view>
+    <view class="btn">
+        <button class="btn1">兑现香能</button>
+        <button class="btn2">香能兑换</button>
+    </view>
+</view>

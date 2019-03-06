@@ -1,0 +1,11 @@
+<view class='container'>
+<image src='https://api.txzyzjm.xyz/imgs/main/aroma/introBg.jpg' class='bg'></image>
+  <view class='intro-box'>
+  <text class='intro' decode="{{true}}"> &nbsp;&nbsp;香气的产生，来源于您的登陆、点击、关注、分享、影响力等创造的价值。香气值可用于兑换目前等值的商品，兑换商城消耗香气换取、抵扣、消费、拍卖品。基于“去中心化”、“公开透明”、“全程追溯”的区块链概念，将您每一个可以创造价值的操作记录，使大家的互动，成为彼此的财富。\n&nbsp;&nbsp;同时，参与丰富的互动可获得更多的香气，成为授权经销商拥有“香能源”更能加速香气的凝聚。
+  </text>
+  </view>
+  <view class='accelerate'>
+  <image src='https://api.txzyzjm.xyz/imgs/main/aroma/btn.png'  class='accelerate-btn'></image>
+  </view>
+  <button class='detail-btn'>明细</button>
+</view>

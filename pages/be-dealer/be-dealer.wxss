@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.txzyzjm.xyz/imgs/be-dealer/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn {
+  width: 524rpx;
+  height: 134rpx;
+  position: absolute;
+  left: 50%;
+  bottom: 140rpx;
+  margin-left: -262rpx;
+}
+.btn image {
+  width: 524rpx;
+  height: 134rpx;
+}

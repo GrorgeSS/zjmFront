@@ -1,0 +1,202 @@
+page {
+  overflow: hidden;
+}
+
+.topContent {
+  position: relative;
+}
+
+.interface {
+  z-index: -1;
+  width: 750rpx;
+  height: 698rpx;
+}
+
+
+
+.introduction {
+  display: block;
+  position: absolute;
+  width: 150rpx;
+  height: 114rpx;
+  right: 0;
+  top: 52rpx;
+}
+
+.icon-box {
+  display: flex;
+}
+
+.icon-box button {
+  width: 188rpx;
+  height: 122rpx;
+  position: relative;
+  line-height: 1.355;
+  padding: 0;
+  background: transparent;
+}
+
+.icon-box button::after {
+  outline: none;
+  list-style: none;
+  border: none;
+}
+
+.icon-box button:active, .icon-box button:hover, .icon-box .button-hover {
+  color: black;
+  border: none;
+}
+
+.button-hover::after {
+  color: black;
+  border: none;
+}
+
+.notice {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #050b19;
+  overflow: hidden;
+}
+
+.notice-left {
+  width: 20%;
+  margin-left: 15rpx;
+  float: left;
+}
+
+.notice-left text {
+  display: block;
+  color: white;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.trumpet {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+}
+
+.notice-right {
+  overflow: hidden;
+}
+
+.rolling {
+  width: 50%;
+}
+
+.rolling-txt {
+  /* position: absolute; */
+  height: 60rpx;
+  line-height: 60rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+swiper {
+  height: 60rpx;
+}
+
+.item {
+  text-align: center;
+  flex-direction: row;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.item text {
+  display: block;
+  font-size: 12px;
+}
+
+.icon-item {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.rank-item-box {
+  padding: 0 15px;
+}
+
+.rank-box {
+  margin-top: 15px;
+}
+
+.rank-title {
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+.aroma-btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.bubble {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.aroma-text {
+  color: white;
+  font-size: 34rpx;
+  margin-top: -20rpx;
+  font-family: Heiti SC;
+}
+
+.bubble-box>view:first-child {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  text-align: center;
+}
+
+.bubble-box>view:nth-child(2) {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  text-align: center;
+}
+
+.bubble-box>view:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  text-align: center;
+}
+
+.bubble-box>view:nth-child(4) {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  text-align: center;
+}
+
+.bubble-box>view:nth-child(5) {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  text-align: center;
+}
+
+.bubble-box>view:nth-child(6) {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}

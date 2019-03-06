@@ -1,0 +1,81 @@
+<view class='box'>
+
+  <!--订单编号和下单时间，如果是旧订单就显示-->
+  <view class='introduce' wx:if="{{basicInfo}}">
+    <view class='introduce-info'>
+      <view>
+        <text>下单时间:</text>
+        <text>{{basicInfo.orderTime}}</text>
+      </view>
+      <view>
+        <text>订单编号:</text>
+        <text>{{basicInfo.orderNo}}</text>
+      </view>
+    </view>
+    <view class='introduce-state'>
+      <text class='red' wx:if="{{orderStatus==1}}">待付款</text>
+      <text wx:if="{{orderStatus==2}}">已付款</text>
+      <text wx:if="{{orderStatus==3}}">已发货</text>
+    </view>
+  </view>
+
+  <!--地址-->
+  <view class='address-box' bindtap='ToAddress'>
+    <block wx:if="{{linkMan}}">
+      <view class='address'>
+        <text>{{linkMan}}</text>
+        <text class='tel'>{{mobile}}</text>
+        <view>{{selProvince}}{{selCity}}{{selDistrict}}{{address}}</view>
+        <image class='right' src='https://api.txzyzjm.xyz/imgs/icon/arrow@right.png'>
+        </image>
+      </view>
+    </block>
+    <block wx:else >
+      <view class="add-new-address">
+        <text class="icon">+</text>
+        <text>添加收货地址</text>
+      </view>
+    </block>
+  </view>
+
+  <!--订单详情-->
+  <view class='product'>
+    <view class='product-image'>
+      <image src='{{productImages}}'></image>
+    </view>
+    <text class='name'>{{productName}}</text>
+    <text class='price'>{{productPrice}}</text>
+    <view class='number'>
+      <view class='button-icon' bindtap='ReduceNumber' wx:if='{{!orderStatus}}'>-</view>
+      <view class='number-change'>x {{num}}</view>
+      <view class='button-icon' bindtap='AddNumber' wx:if='{{!orderStatus}}'>+</view>
+    </view>
+  </view>
+  <view class='using'>
+    <view class='using-text'>使用香气</view>
+    <switch checked='{{checkedValue}}' bindchange='toChecked' disabled='{{orderStatus === 2 || orderStatus === 3}}'>
+    </switch>
+    <view class='using-number'>{{aromaNumber}}可用</view>
+  </view>
+  <view class='money'>
+    <text class='money-left'>使用物流</text>
+    <text class='money-right'>顺丰物流  ¥{{cost}}</text>
+  </view>
+  <view class='money'>
+    <text class='money-left'>总计 ¥{{total}}</text>
+    <text class='money-left'>抵扣 ¥{{Deductible}}</text>
+    <text class='money-right'>实付 <text class='red'>{{account}}</text></text>
+  </view>
+  <input type='text' placeholder='留言' class='message' bindinput='getMessage' value='{{message}}' wx:if='{{orderStatus==0}}'>
+  </input>
+  <view class='message' wx:if='{{orderStatus!=0}}'>{{message}}</view>
+  
+
+  <!--提交订单-->
+  <view class='order'>
+    <text class='order-text'>付款合计：</text>
+    <text class='order-money'>¥{{account}}</text>
+    <view class='order-submit' wx:if="{{orderStatus==1 || orderStatus==0}}" bindtap='pay'>去付款</view>
+  </view>
+
+</view>
